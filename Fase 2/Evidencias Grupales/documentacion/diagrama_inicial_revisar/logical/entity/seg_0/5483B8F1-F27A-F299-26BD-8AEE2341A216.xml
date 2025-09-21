@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5483B8F1-F27A-F299-26BD-8AEE2341A216" name="Region">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 02:16:53 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_region" id="6B72B781-D6BF-0A26-FA24-42FBD42F1486">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 02:17:06 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,10000,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="desc_region" id="B97CA37E-45A5-A4C1-7BBB-6B9F0B2033B9">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 02:17:32 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="45C30207-5BB9-CC29-D042-B5CDE7A8CC05" name="Region PK">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 02:17:29 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6B72B781-D6BF-0A26-FA24-42FBD42F1486</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

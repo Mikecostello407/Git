@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C27EBB44-5DBD-0350-7842-3D7587089547" name="Alerta">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-19 01:03:03 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_ALERTA" id="98AA6F7F-A11D-A1FC-3178-17912CF07C13">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 02:28:00 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,10000,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Descripcion alerta" id="41023FA3-4562-6AAC-21EF-F8C971807E19">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 02:28:20 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_CATEGORIA" id="1580D131-85F1-D612-AD42-295130B91AFB">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 02:54:50 UTC</createdTime>
+<generatorID>40F31F3D-971F-A3BD-B3EA-383EA68C4091</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<referedAttribute>1926B3DD-9CD8-95D5-4D84-C61B336BDEDE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="219BB48D-C37B-A21E-FA03-1C833C0614EF" name="Alerta PK">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 02:30:08 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>98AA6F7F-A11D-A1FC-3178-17912CF07C13</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

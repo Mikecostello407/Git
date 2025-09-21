@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="075C99E9-51DC-46B5-DAC0-AFE84DF32023" name="Clientes">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-19 00:47:45 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_CLIENTE" id="F099E3DE-59DA-9F68-9BA2-3E909B8662AE">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-19 01:09:03 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,10000,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre cliente" id="0DB79EE2-0935-FA3E-678B-1A9882763173">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-19 01:09:46 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Rut" id="1ECC4C0A-BA7E-FF92-0AEF-BD93053F3923">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-19 01:10:11 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fecha_Nacimiento" id="143843C9-18C3-A5A0-D091-6C32DC052307">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-19 01:11:11 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_comercio" id="D37B88DD-FAA7-63DC-2215-A13228F36AF4">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 02:57:05 UTC</createdTime>
+<generatorID>B6B6F3AC-216D-46E1-07A9-874BAE1AE519</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<referedAttribute>EC69253D-6CC0-F12B-5754-031AF4BF7198</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4B7DCCCF-C3BA-4541-4FCA-E5A9135F3F24" name="Clientes PK">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-19 01:09:44 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F099E3DE-59DA-9F68-9BA2-3E909B8662AE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
