@@ -1,0 +1,149 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CA8089C4-0CFF-79EE-6B5B-E66B4397CE93" name="Plan">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>2FCDD5B8-64E8-6521-FB87-C4784F7AF469</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PLAN" id="31B1CFA7-F281-A929-3170-C8A8D936C1B6">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>64217A2D-8F45-8016-A0AA-CD2E23747395</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>500</dataTypePrecision>
+<ownDataTypeParameters>,500,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre_Plan" id="DBCB021C-15E3-1D1C-CA0F-C03EC801196B">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>ABF9907E-BEBC-B76D-B3C2-08A52D0DBB3C</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR" id="5B4DB564-30B8-00DA-8D3C-9E0DC51DDB21">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>CB3765D5-DEE8-C894-EF31-774665B65FAD</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>500</dataTypePrecision>
+<ownDataTypeParameters>,500,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Pago_ID_PAGO" id="1B4697E3-3947-3162-F839-DC4747053C4A">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>C67A0194-56E7-5438-7FB0-D23A759AB771</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F65EB8E5-B709-7D5B-6D1A-EFAC112012F3" referredColumn="2FAC0762-F07A-2788-7F78-3A2BDA885CA2"/>
+</associations>
+</Column>
+<Column name="Servicios_ID_SERVICIO" id="F21697C4-FBA1-9B69-AF31-D646B6BA202C">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>EB3DC449-0AB6-7F50-4ED0-8B8808CA58AE</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="84356DC4-9D80-A50A-745E-C85F21A74CC9" referredColumn="66DA2A74-A5F3-F5E4-CCD2-62A18EE679CC"/>
+</associations>
+</Column>
+<Column name="FECHA_inicial" id="B72F345B-637C-649A-4F5E-BEF13AF10AD4">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>68FB195E-F20E-821D-2695-2FE9AEE9D068</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha_Termino" id="0DE126A3-40A5-FACC-4E46-15F570195605">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>35AACF50-452A-8EC6-4FCD-5E2438267E55</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Estado" id="7598A30F-55C9-75B5-567E-7B44F1299DD2">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>4C1E5624-7285-7E98-D6F0-CD8587B4FF55</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0D9ADE68-6136-732E-1A44-DF3A19E0CE67" name="Plan_PK">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>F217AD95-7F2E-C1F2-0EFC-FB28DC5AD3D8</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31B1CFA7-F281-A929-3170-C8A8D936C1B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E5FAF3E3-E5D2-219D-9B0B-E24CAE28E4AF" name="Plan_Pago_FK">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>FF13D1ED-49AE-4544-D618-95B9DF12A736</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1B4697E3-3947-3162-F839-DC4747053C4A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E4A7F034-207C-00DB-A83A-0E9125BFF6C2" name="Plan_Servicios_FK">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>C8DCC880-EBC2-73FF-67A5-12879071F077</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F21697C4-FBA1-9B69-AF31-D646B6BA202C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

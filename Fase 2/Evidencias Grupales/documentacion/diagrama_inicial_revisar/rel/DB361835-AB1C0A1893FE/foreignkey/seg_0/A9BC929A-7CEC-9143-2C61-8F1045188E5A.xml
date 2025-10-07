@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A9BC929A-7CEC-9143-2C61-8F1045188E5A" containerWithKeyObject="79A5324C-6750-242C-576C-92302D0F8914" localFKIndex="4C3E4EA1-8BFC-D41D-4AD5-354083B583EF" name="Localidad_Region_FK">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>CECFBBBE-33EB-A597-251C-4382E02B5B47</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<referredTableLongName>Region</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>DF084272-C3C1-3F5F-2169-ED24704FABE8</referredTableID>
+<keyObject>3EFBFD4B-3E52-AA25-4C3C-70D2D396C0FB</keyObject>
+<referredKeyID>3EFBFD4B-3E52-AA25-4C3C-70D2D396C0FB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_region</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

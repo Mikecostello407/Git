@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="81B5736F-C7C3-1BFB-8FD9-F03C1F28EF41" name="Marcador">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>92828F7F-ED6A-A719-38BD-42C1AC8DE0A9</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_MARCADOR" id="63B55110-7154-1340-3F93-6B0CD44D1071">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>A706C90F-C00C-1885-50F3-5798B6DAD980</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,10000,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Desc_Marcador" id="F2D687A5-0127-4DEC-3472-AD7C8A5B46AE">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>D5E17D81-A542-CF06-E947-F1781EDF507A</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B2987678-6244-061A-AAAC-AEADEACC6F9C" name="Marcador_PK">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>F980C892-C7FC-1F89-11BA-1A9615B6C38F</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="63B55110-7154-1340-3F93-6B0CD44D1071"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

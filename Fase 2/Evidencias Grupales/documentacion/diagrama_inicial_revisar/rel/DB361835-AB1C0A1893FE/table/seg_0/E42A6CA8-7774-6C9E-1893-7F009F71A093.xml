@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E42A6CA8-7774-6C9E-1893-7F009F71A093" name="Clientes">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>075C99E9-51DC-46B5-DAC0-AFE84DF32023</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CLIENTE" id="CEE7C9A0-5CAD-F438-F4FB-F949B749A46F">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>F099E3DE-59DA-9F68-9BA2-3E909B8662AE</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,10000,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre_cliente" id="FBEC1091-CC95-B51D-AF88-DF1724756183">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>0DB79EE2-0935-FA3E-678B-1A9882763173</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Rut" id="91E4CAC1-2BE3-C499-691C-3FBF6530527C">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>1ECC4C0A-BA7E-FF92-0AEF-BD93053F3923</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha_Nacimiento" id="3781DA54-47AE-CE5C-918D-342767508E71">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>143843C9-18C3-A5A0-D091-6C32DC052307</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Entidad/Comercio_id_comercio" id="4005E60C-6AC0-F1F4-9CC8-9FD5DC35C6C6">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>D37B88DD-FAA7-63DC-2215-A13228F36AF4</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5443C988-7A14-93A5-8107-A68DBA39F023" referredColumn="75901857-D4DA-F1BD-7324-3433282766CD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DBB7A32C-49F4-0618-211A-77DC81BB2EBF" name="Clientes_PK">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>4B7DCCCF-C3BA-4541-4FCA-E5A9135F3F24</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CEE7C9A0-5CAD-F438-F4FB-F949B749A46F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F7DA2309-8DDC-9610-525E-8975470BEF25" name="Clientes_Entidad/Comercio_FK">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>B6B6F3AC-216D-46E1-07A9-874BAE1AE519</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4005E60C-6AC0-F1F4-9CC8-9FD5DC35C6C6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

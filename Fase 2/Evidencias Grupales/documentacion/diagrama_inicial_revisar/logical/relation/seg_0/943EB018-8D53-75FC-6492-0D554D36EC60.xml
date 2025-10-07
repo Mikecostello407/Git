@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Plan_Registro" directorySegmentName="seg_0" id="943EB018-8D53-75FC-6492-0D554D36EC60">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 03:33:28 UTC</createdTime>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<engineerTo>
+<item key="DB361835-D110-E93E-6D52-AB1C0A1893FE" value="true"/>
+</engineerTo>
+<sourcePk>F217AD95-7F2E-C1F2-0EFC-FB28DC5AD3D8</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2FCDD5B8-64E8-6521-FB87-C4784F7AF469</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>7A2590A3-12F4-0603-2876-FD0DB330D87F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

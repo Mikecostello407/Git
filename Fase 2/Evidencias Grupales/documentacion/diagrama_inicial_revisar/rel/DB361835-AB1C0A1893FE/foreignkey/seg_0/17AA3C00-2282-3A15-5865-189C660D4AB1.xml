@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="17AA3C00-2282-3A15-5865-189C660D4AB1" containerWithKeyObject="FDFC7F7E-BB3C-E993-199B-AC6199D517A7" localFKIndex="A9AA3A55-839C-7694-6D9F-692AF29F4CCB" name="Alerta_categoria_alerta_FK">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>40F31F3D-971F-A3BD-B3EA-383EA68C4091</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<referredTableLongName>categoria_alerta</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8C35EC11-E662-1B1F-9074-7CEB27D4642B</referredTableID>
+<keyObject>9F222BBD-8C7D-9F6F-9ACE-7D36FD862B1B</keyObject>
+<referredKeyID>9F222BBD-8C7D-9F6F-9ACE-7D36FD862B1B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_CATEGORIA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

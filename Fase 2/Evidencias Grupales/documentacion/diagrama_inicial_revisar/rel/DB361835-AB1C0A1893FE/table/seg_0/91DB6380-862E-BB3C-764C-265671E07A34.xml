@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="91DB6380-862E-BB3C-764C-265671E07A34" name="Servicios">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>49065051-F04B-E7EC-FECA-199B38BD2187</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_SERVICIO" id="66DA2A74-A5F3-F5E4-CCD2-62A18EE679CC">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>1628F1CD-70AB-3169-8247-F260FEDC6809</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,10000,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESC_SERVICIO" id="2E88F709-A3C6-FC7B-43AD-41D053A4308E">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>511103E5-29A9-9D68-2065-20E8505B68B5</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E30BDDA6-EF26-F331-3E3B-68EB816F369C" name="Servicios_PK">
+<createdBy>Chimimserra</createdBy>
+<createdTime>2025-09-21 04:19:29 UTC</createdTime>
+<generatorID>7398990D-93DF-0280-959F-69FBA6D7BB4F</generatorID>
+<ownerDesignName>diagrama_inicial_revisar</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66DA2A74-A5F3-F5E4-CCD2-62A18EE679CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
