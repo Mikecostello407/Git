@@ -1,0 +1,1660 @@
+<html
+        xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>Jira</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\,";
+    mso-displayed-thousand-separator:"\.";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+td.issuekey,
+td.issuetype,
+td.status {
+    mso-style-parent: "";
+    mso-number-format: \@;
+    text-align: left;
+}
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#205081" height="30">
+        <td colspan="45">
+            <img src="https://duocuc-team-tc5z9zpf.atlassian.net/images/icon-jira-family-logo.png" width="57" height="30" border="0" alt="Jira">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="45">
+            <a href="https://duocuc-team-tc5z9zpf.atlassian.net/issues/?jql=project+%3D+%22SCRUM%22+ORDER+BY+created+DESC">Jira</a>
+        </td>
+    </tr>
+    <tr>
+                <td colspan="45">
+            Mostrando <strong>19</strong> incidencias como en <strong>18/oct/25 2:38 PM</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+                                        <table id="issuetable" class="aui " border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-statuscategorychangedate" data-id="statuscategorychangedate">
+                                                        Categoría de estado cambiada
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                                                        Tipo de Incidencia
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                                                        Clave
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timespent" data-id="timespent">
+                                                        Tiempo Trabajado
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeoriginalestimate" data-id="timeoriginalestimate">
+                                                        Estimación original
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-project" data-id="project">
+                                                        Proyecto
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-description" data-id="description">
+                                                        Descripción
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-fixVersions" data-id="fixVersions">
+                                                        Versiones corregidas
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimespent" data-id="aggregatetimespent">
+                                                        Σ Tiempo empleado
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-statusCategory" data-id="statusCategory">
+                                                        Categoría de estado
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-parent" data-id="parent">
+                                                        Principal
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolution" data-id="resolution">
+                                                        Resolución
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10015" data-id="customfield_10015">
+                                                        Start date
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-security" data-id="security">
+                                                        Nivel de Seguridad
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeestimate" data-id="aggregatetimeestimate">
+                                                        Σ Trabajo restante estimado
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolutiondate" data-id="resolutiondate">
+                                                        Resuelta
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-workratio" data-id="workratio">
+                                                        Relación de trabajo
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-summary" data-id="summary">
+                                                        Resumen
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-watches" data-id="watches">
+                                                        Interesados
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-lastViewed" data-id="lastViewed">
+                                                        Vista por Última Vez
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-thumbnail" data-id="thumbnail">
+                                                        Imágenes
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-creator" data-id="creator">
+                                                        Creador
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-subtasks" data-id="subtasks">
+                                                        Subtareas
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-created" data-id="created">
+                                                        Creada
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10020" data-id="customfield_10020">
+                                                        Sprint
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10021" data-id="customfield_10021">
+                                                        Flagged
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-reporter" data-id="reporter">
+                                                        Informador
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregateprogress" data-id="aggregateprogress">
+                                                        Σ Progreso
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10000" data-id="customfield_10000">
+                                                        development
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-priority" data-id="priority">
+                                                        Prioridad
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10001" data-id="customfield_10001">
+                                                        Team
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-labels" data-id="labels">
+                                                        Etiquetas
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10016" data-id="customfield_10016">
+                                                        Story point estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10017" data-id="customfield_10017">
+                                                        Issue color
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-environment" data-id="environment">
+                                                        Entorno
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10019" data-id="customfield_10019">
+                                                        Rank
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeestimate" data-id="timeestimate">
+                                                        Trabajo restante estimado
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeoriginalestimate" data-id="aggregatetimeoriginalestimate">
+                                                        Σ Estimación original
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-duedate" data-id="duedate">
+                                                        Fecha de vencimiento
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-progress" data-id="progress">
+                                                        Progreso
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuelinks" data-id="issuelinks">
+                                                        Incidencias Enlazadas
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-votes" data-id="votes">
+                                                        Votos
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-assignee" data-id="assignee">
+                                                        Persona asignada
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-updated" data-id="updated">
+                                                        Actualizada
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-status" data-id="status">
+                                                        Estado
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow10055" rel="10055" data-issuekey="SCRUM-24" class="issuerow">
+                                            <td class="statuscategorychangedate"> 18/oct/25 3:32 AM </td>
+                                            <td class="issuetype">    Epic
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-24" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-24">SCRUM-24</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Por hacer</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Sin resolver</em>
+</td>
+                                            <td class="customfield_10015">          <span title="17/nov/25"><time datetime="2025-11-17">17/nov/25</time></span>
+    </td>
+                                            <td class="security">1796f257ec9b069c63d225cb4b2e85b33c206dc2a8c7f834b08c56a14f4142e7</td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Panel de Administración y Moderación
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 18/oct/25 3:49 AM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 18/oct/25 3:32 AM </td>
+                                            <td class="customfield_10020">Estabilidad y Lanzamiento Fin</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0003z:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    01/dic/25
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="updated"> 18/oct/25 3:49 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Por hacer&lt;/span&gt;">Por hacer</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10054" rel="10054" data-issuekey="SCRUM-23" class="issuerow">
+                                            <td class="statuscategorychangedate"> 18/oct/25 3:32 AM </td>
+                                            <td class="issuetype">    Epic
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-23" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-23">SCRUM-23</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Por hacer</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Sin resolver</em>
+</td>
+                                            <td class="customfield_10015">          <span title="03/nov/25"><time datetime="2025-11-03">03/nov/25</time></span>
+    </td>
+                                            <td class="security">1796f257ec9b069c63d225cb4b2e85b33c206dc2a8c7f834b08c56a14f4142e7</td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Gestión de Publicaciones (Avisos y Publicidad)
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 18/oct/25 4:01 AM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 18/oct/25 3:32 AM </td>
+                                            <td class="customfield_10020">Usabilidad y Comercios</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0003r:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    17/nov/25
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="updated"> 18/oct/25 3:47 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Por hacer&lt;/span&gt;">Por hacer</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10053" rel="10053" data-issuekey="SCRUM-22" class="issuerow">
+                                            <td class="statuscategorychangedate"> 18/oct/25 3:31 AM </td>
+                                            <td class="issuetype">    Epic
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-22" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-22">SCRUM-22</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Por hacer</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Sin resolver</em>
+</td>
+                                            <td class="customfield_10015">          <span title="16/oct/25"><time datetime="2025-10-16">16/oct/25</time></span>
+    </td>
+                                            <td class="security">1796f257ec9b069c63d225cb4b2e85b33c206dc2a8c7f834b08c56a14f4142e7</td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Gestión de Acceso y Visualización
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 18/oct/25 3:45 AM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 18/oct/25 3:31 AM </td>
+                                            <td class="customfield_10020">Reporte Mínimo y Mapa 2</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0003j:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    31/oct/25
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="updated"> 18/oct/25 3:46 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Por hacer&lt;/span&gt;">Por hacer</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10020" rel="10020" data-issuekey="SCRUM-21" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 1:05 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-21" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-21">SCRUM-21</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Por hacer</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Sin resolver</em>
+</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Resumen finalizado
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:57 AM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0003b:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="updated"> 16/oct/25 1:06 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Por hacer&lt;/span&gt;">Por hacer</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10019" rel="10019" data-issuekey="SCRUM-20" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:56 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-20" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-20">SCRUM-20</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Por hacer</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Sin resolver</em>
+</td>
+                                            <td class="customfield_10015">          <span title="21/nov/25"><time datetime="2025-11-21">21/nov/25</time></span>
+    </td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Documentación final, capacitación y soporte.
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 18/oct/25 4:00 AM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:56 AM </td>
+                                            <td class="customfield_10020">Estabilidad y Lanzamiento Fin</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0002r:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    27/nov/25
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="updated"> 18/oct/25 4:01 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Por hacer&lt;/span&gt;">Por hacer</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10018" rel="10018" data-issuekey="SCRUM-19" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:56 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-19" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-19">SCRUM-19</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Por hacer</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Sin resolver</em>
+</td>
+                                            <td class="customfield_10015">          <span title="28/nov/25"><time datetime="2025-11-28">28/nov/25</time></span>
+    </td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Lanzamiento Oficial
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 18/oct/25 4:01 AM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:56 AM </td>
+                                            <td class="customfield_10020">Estabilidad y Lanzamiento Fin</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0002v:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    25/oct/25
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            he.hidalgot
+    </td>
+                                            <td class="updated"> 18/oct/25 4:01 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Por hacer&lt;/span&gt;">Por hacer</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10017" rel="10017" data-issuekey="SCRUM-18" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:55 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-18" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-18">SCRUM-18</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Por hacer</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Sin resolver</em>
+</td>
+                                            <td class="customfield_10015">          <span title="17/nov/25"><time datetime="2025-11-17">17/nov/25</time></span>
+    </td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Despliegue de software
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 18/oct/25 3:59 AM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:55 AM </td>
+                                            <td class="customfield_10020">Estabilidad y Lanzamiento Fin</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0002n:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    20/nov/25
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="updated"> 18/oct/25 4:00 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Por hacer&lt;/span&gt;">Por hacer</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10016" rel="10016" data-issuekey="SCRUM-17" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:49 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-17" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-17">SCRUM-17</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Por hacer</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Sin resolver</em>
+</td>
+                                            <td class="customfield_10015">          <span title="14/nov/25"><time datetime="2025-11-14">14/nov/25</time></span>
+    </td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Lanzamiento (Beta/Test)
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 18/oct/25 3:58 AM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:49 AM </td>
+                                            <td class="customfield_10020">Usabilidad y Comercios</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0002f:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    17/nov/25
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="updated"> 18/oct/25 3:59 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Por hacer&lt;/span&gt;">Por hacer</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10015" rel="10015" data-issuekey="SCRUM-16" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:49 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-16" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-16">SCRUM-16</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Por hacer</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Sin resolver</em>
+</td>
+                                            <td class="customfield_10015">          <span title="08/nov/25"><time datetime="2025-11-08">08/nov/25</time></span>
+    </td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Mejorar la usabilidad
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 18/oct/25 3:57 AM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:49 AM </td>
+                                            <td class="customfield_10020">Usabilidad y Comercios</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i00027:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    13/nov/25
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="updated"> 18/oct/25 3:58 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Por hacer&lt;/span&gt;">Por hacer</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10014" rel="10014" data-issuekey="SCRUM-15" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:49 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-15" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-15">SCRUM-15</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Por hacer</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Sin resolver</em>
+</td>
+                                            <td class="customfield_10015">          <span title="03/nov/25"><time datetime="2025-11-03">03/nov/25</time></span>
+    </td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Diseño UX-UI
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 18/oct/25 3:57 AM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:49 AM </td>
+                                            <td class="customfield_10020">Usabilidad y Comercios</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0001z:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    07/nov/25
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="updated"> 18/oct/25 3:57 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Por hacer&lt;/span&gt;">Por hacer</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10012" rel="10012" data-issuekey="SCRUM-13" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:36 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-13" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-13">SCRUM-13</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Por hacer</span>
+</td>
+                                            <td class="parent">            Gestión de Acceso y Visualización
+    </td>
+                                            <td class="resolution">    <em>Sin resolver</em>
+</td>
+                                            <td class="customfield_10015">          <span title="27/oct/25"><time datetime="2025-10-27">27/oct/25</time></span>
+    </td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Definir el flujo de reporte de incidentes y crear la interfaz inicial (Diseño UX/UI ligero).
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 18/oct/25 3:56 AM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:36 AM </td>
+                                            <td class="customfield_10020">Reporte Mínimo y Mapa, Reporte Mínimo y Mapa 2</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0001r:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    31/oct/25
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            he.hidalgot
+    </td>
+                                            <td class="updated"> 18/oct/25 3:56 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Por hacer&lt;/span&gt;">Por hacer</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10011" rel="10011" data-issuekey="SCRUM-12" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:36 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-12" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-12">SCRUM-12</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Por hacer</span>
+</td>
+                                            <td class="parent">            Gestión de Acceso y Visualización
+    </td>
+                                            <td class="resolution">    <em>Sin resolver</em>
+</td>
+                                            <td class="customfield_10015">          <span title="23/oct/25"><time datetime="2025-10-23">23/oct/25</time></span>
+    </td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Preparación y entrega de primera MVP
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 18/oct/25 3:52 AM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:36 AM </td>
+                                            <td class="customfield_10020">Reporte Mínimo y Mapa, Reporte Mínimo y Mapa 2</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0001j:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    26/oct/25
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            he.hidalgot
+    </td>
+                                            <td class="updated"> 18/oct/25 3:56 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Por hacer&lt;/span&gt;">Por hacer</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10010" rel="10010" data-issuekey="SCRUM-11" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:35 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-11" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-11">SCRUM-11</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Por hacer</span>
+</td>
+                                            <td class="parent">            Gestión de Acceso y Visualización
+    </td>
+                                            <td class="resolution">    <em>Sin resolver</em>
+</td>
+                                            <td class="customfield_10015">          <span title="20/oct/25"><time datetime="2025-10-20">20/oct/25</time></span>
+    </td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Integración con API necesarias
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 18/oct/25 3:52 AM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:35 AM </td>
+                                            <td class="customfield_10020">Reporte Mínimo y Mapa, Reporte Mínimo y Mapa 2</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0001b:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    22/oct/25
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            he.hidalgot
+    </td>
+                                            <td class="updated"> 18/oct/25 3:52 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Por hacer&lt;/span&gt;">Por hacer</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10009" rel="10009" data-issuekey="SCRUM-10" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:38 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-10" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-10">SCRUM-10</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-yellow
+            jira-issue-status-lozenge-max-width-medium">En curso</span>
+</td>
+                                            <td class="parent">            Gestión de Acceso y Visualización
+    </td>
+                                            <td class="resolution">    <em>Sin resolver</em>
+</td>
+                                            <td class="customfield_10015">          <span title="16/oct/25"><time datetime="2025-10-16">16/oct/25</time></span>
+    </td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Integración con API necesarias (Google Maps
+    </p>
+</td>
+                                            <td class="watches">2</td>
+                                            <td class="lastViewed"> 18/oct/25 1:16 PM </td>
+                                            <td class="thumbnail">            <a aria-label="Seleccionar para descargar la imagen para SCRUM-10" href="https://duocuc-team-tc5z9zpf.atlassian.net/secure/attachment/10000/image-20251016-190824.png">
+            image-20251016-190824.png
+        </a>
+    </td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:35 AM </td>
+                                            <td class="customfield_10020">Reporte Mínimo y Mapa, Reporte Mínimo y Mapa 2</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i00013:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    20/oct/25
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            he.hidalgot
+    </td>
+                                            <td class="updated"> 18/oct/25 3:52 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;En curso&lt;/span&gt;">En curso</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10005" rel="10005" data-issuekey="SCRUM-6" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:19 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-6" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-6">SCRUM-6</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Listo</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    Listo
+</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> 16/oct/25 12:19 AM </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Configuración de entorno
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:19 AM </td>
+                                            <td class="customfield_10020">Base Técnica y Registro</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0000v:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            he.hidalgot
+    </td>
+                                            <td class="updated"> 16/oct/25 1:05 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Finalizado&lt;/span&gt;">Finalizado</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10004" rel="10004" data-issuekey="SCRUM-5" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:19 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-5" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-5">SCRUM-5</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Listo</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    Listo
+</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> 16/oct/25 12:19 AM </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Preparación de máquinas y Inst. de software base
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:18 AM </td>
+                                            <td class="customfield_10020">Base Técnica y Registro</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0000n:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="updated"> 16/oct/25 1:10 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Finalizado&lt;/span&gt;">Finalizado</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10003" rel="10003" data-issuekey="SCRUM-4" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:19 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-4" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-4">SCRUM-4</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Listo</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    Listo
+</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> 16/oct/25 12:19 AM </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Levantamiento ambiente de producción
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:18 AM </td>
+                                            <td class="customfield_10020">Base Técnica y Registro</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i0000f:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="updated"> 16/oct/25 1:09 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Finalizado&lt;/span&gt;">Finalizado</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10002" rel="10002" data-issuekey="SCRUM-3" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:19 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-3" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-3">SCRUM-3</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Listo</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    Listo
+</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> 16/oct/25 12:19 AM </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Definición de conceptos claves
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:18 AM </td>
+                                            <td class="customfield_10020">Base Técnica y Registro</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|i00007:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="updated"> 16/oct/25 1:09 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Finalizado&lt;/span&gt;">Finalizado</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow10001" rel="10001" data-issuekey="SCRUM-2" class="issuerow">
+                                            <td class="statuscategorychangedate"> 16/oct/25 12:19 AM </td>
+                                            <td class="issuetype">    Tarea
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SCRUM-2" href="https://duocuc-team-tc5z9zpf.atlassian.net/browse/SCRUM-2">SCRUM-2</a>
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="project">    JobSy
+</td>
+                                            <td class="description"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Listo</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    Listo
+</td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="resolutiondate"> 16/oct/25 12:19 AM </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="summary"><p>
+                Toma de requerimientos
+    </p>
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="creator">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="created"> 16/oct/25 12:16 AM </td>
+                                            <td class="customfield_10020">Base Técnica y Registro</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="reporter">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="customfield_10001">    Ninguno
+</td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="environment"></td>
+                                            <td class="customfield_10019">      0|hzzzzz:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="votes">0</td>
+                                            <td class="assignee">            Nicolas Michel Santibanez Leiva
+    </td>
+                                            <td class="updated"> 16/oct/25 1:09 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Finalizado&lt;/span&gt;">Finalizado</span>    </td>
+                    </tr>
+        </tbody>
+    </table>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="45"><font size="1">
+        Generado a las Sat Oct 18 17:38:52 UTC 2025 por Nicolas Michel Santibanez Leiva usando JIRA 1001.0.0-SNAPSHOT#100290-rev:7711952900727759028b2799f351c92c8b8a2417.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>
